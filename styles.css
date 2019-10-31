@@ -18,7 +18,7 @@ wrapper {
     left: 0;
     position: fixed;
     width: 100%;
-    min-height: 90%;
+    height: 100vh;
     overflow: hidden;
     z-index: -1;
 }
@@ -46,7 +46,7 @@ wrapper {
 }
 
 .animation-trigger {
-    background-color: rgb(0, 89, 255);
+    background-color: #2962ff;
     position: relative;
     top: -50px;
     left: -.5%;
@@ -58,7 +58,7 @@ wrapper {
 }
 
 .animation-trigger:hover {
-    background-color: rgb(31, 60, 114);
+    background-color: #448aff;
 }
 
 .social {
