@@ -11,10 +11,14 @@ wrapper {
 .photo {
     background-image: url("img/bg-photo.jpg");
     background-repeat: no-repeat;
+<<<<<<< HEAD
     background-position: 60%;
     background-attachment: fixed;
     background-size: cover;
     position: fixed;
+=======
+    background-position: 50%;
+>>>>>>> master
     top: 0;
     left: 0;
     width: 100%;
