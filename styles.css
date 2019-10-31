@@ -18,7 +18,7 @@ wrapper {
     left: 0;
     position: fixed;
     width: 100%;
-    min-height: 100%;
+    min-height: 90%;
     overflow: hidden;
     z-index: -1;
 }
