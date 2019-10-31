@@ -4,8 +4,8 @@ margin: 0;
 box-sizing: border-box;
 }
 
-body {
-    
+wrapper {
+    size: 100% 100%;
 }
 
 .photo {
@@ -23,8 +23,76 @@ body {
 }
 
 .flow-square {
-    background-color: darkgray;
-    position: fixed;
-    width: 100%;
-    min-height: 80%;
+    background-color: rgb(169, 169, 169);
+    position: absolute;
+    top: 80%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    width: auto;
+    min-height: 1000px;
+    transform: rotate(3deg) skewX(3deg);
+    overflow: hidden;
+    box-shadow: 0px 0px 22px 15px rgba(0,0,0,0.85);
+}
+
+.content-container {
+}
+
+.content-box {
+    transform: rotate(-3deg);
+    padding: 0% 10%;
+}
+
+.animation-trigger {
+    background-color: rgb(0, 89, 255);
+    position: relative;
+    top: -50px;
+    left: -.5%;
+    right: -.5%;
+    transform: rotate(-3deg);
+    overflow: hidden;
+    width: 110%;
+    height: 10%;
+}
+
+.animation-trigger:hover {
+    background-color: rgb(31, 60, 114);
+}
+
+.social {
+    display: flex;
+    flex: 1;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    position: relative;
+    top: 50px;
+    width: 3.5rem;
+    height: 300px;
+    left: 0.7%;
+}
+
+.social a *{
+    color: rgba(30,30,30,0.7);
+    transition: 0.5s;
+}
+
+.social a .fa-github-square:hover {
+    transform: scale(1.25);
+    color: #333;
+}
+
+.social a .fa-discord:hover {
+    transform: scale(1.25);
+    color: #7289da;
+}
+
+.social a .fa-facebook-square:hover {
+    transform: scale(1.25);
+    color: #3b5998;
+}
+
+.social a .fa-steam-square:hover {
+    transform: scale(1.25);
+    color: #000000;
 }
