@@ -27,7 +27,6 @@ body {
     position: fixed;
     overflow: hidden;
     z-index: -1;
-    transition: height 999999s;
     height: 90vh;
     width: 100%;
 }
