@@ -5,7 +5,8 @@
     font-family: sans-serif;
 }
 
-html, body {
+html,
+body {
     overflow: auto;
     height: 100%;
 }
@@ -19,7 +20,7 @@ html, body {
     background-image: url("img/bg-photo.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 70%;
+    background-position: 50%;
     background-attachment: fixed;
     top: 0;
     left: 0;
@@ -29,6 +30,38 @@ html, body {
     overflow: hidden;
     z-index: -1;
     transition: height 999999s;
+}
+
+.navbar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -26%;
+    overflow: hidden;
+}
+
+.nav-buttons {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.nav-buttons > div{
+    transform: rotate(15deg);
+    height: 30%;
+    width: 60%;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 22px 15px rgba(0, 0, 0, 0.85);
+}
+
+h2 {
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+    text-align: right;
+    vertical-align: bottom;
 }
 
 .flow-square {
@@ -45,7 +78,7 @@ html, body {
     position: absolute;
     top: 70%;
     width: 100%;
-    min-height: 100%; 
+    min-height: 100%;
 }
 
 .main-content {
@@ -59,7 +92,7 @@ html, body {
     position: relative;
     padding-left: 10%;
     padding-right: 10%;
-    
+
     margin-bottom: 5%;
     transform: skewY(-3deg);
 }
@@ -84,20 +117,20 @@ html, body {
 
 .social {
     display: flex;
-    flex: 1;
     flex-flow: column wrap;
     justify-content: space-between;
-    position: relative;
-    top: 50px;
+    position: absolute;
+    top: 10%;
     width: 3.5rem;
-    height: 300px;
-    left: 0.7%;
+    height: 50%;
+    left: 1%;
 }
 
 .social a * {
     color: rgba(30, 30, 30, 0.7);
     width: auto;
     height: auto;
+    margin: 5px;
     transition: 0.5s;
     background-repeat: no-repeat;
     background-size: 100px 100px;
@@ -141,3 +174,18 @@ footer p {
     left: 10px;
     width: auto;
     text-shadow: 5px 6px 9px rgba(0, 0, 0, 1);
+}
+
+@media only screen and (max-width: 800px) {
+    .social {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        position: absolute;
+        top: 62%;
+        width: 55%;
+        height: 55%;
+        left: 40%;
+        right: 5%;
+    }
+}
