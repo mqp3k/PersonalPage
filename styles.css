@@ -20,7 +20,7 @@ body {
     background-image: url("img/bg-photo.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 50%;
+    background-position: 50% 50%;
     background-attachment: fixed;
     top: 0;
     left: 0;
@@ -28,7 +28,7 @@ body {
     overflow: hidden;
     z-index: -1;
     transition: height 999999s;
-    height: 80vh;
+    height: 90vh;
     width: 100%;
 }
 
