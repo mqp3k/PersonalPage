@@ -1,19 +1,25 @@
 * {
-padding: 0;
-margin: 0;
-box-sizing: border-box;
-font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
-wrapper {
-    size: 100% 100%;
+html, body {
+    overflow: auto;
+    height: 100%;
 }
 
-.photo {
+.wrapper {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.background {
     background-image: url("img/bg-photo.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 40%;
+    background-position: 70%;
     background-attachment: fixed;
     top: 0;
     left: 0;
@@ -27,26 +33,37 @@ wrapper {
 
 .flow-square {
     background-color: #f5f5f5;
-    position: absolute;
-    top: 80%;
-    left: 0%;
-    right: 0%;
-    bottom: 0%;
     width: auto;
-    min-height: 200px;
+    height: 100%;
+    min-height: 400px;
     transform: rotate(3deg) skewX(3deg);
     overflow: hidden;
-    box-shadow: 0px 0px 22px 15px rgba(0,0,0,0.85);
-    z-index: 1;
+    box-shadow: 0px 0px 22px 15px rgba(0, 0, 0, 0.85);
 }
 
 .content-container {
+    position: absolute;
+    top: 70%;
+    width: 100%;
+    min-height: 100%; 
+}
+
+.main-content {
+    width: auto;
+    height: auto;
+    margin-top: 5%;
+    min-height: 300px;
 }
 
 .content-box {
-    transform: rotate(-3deg);
-    padding: 0% 10%;
+    position: relative;
+    padding-left: 10%;
+    padding-right: 10%;
+    
+    margin-bottom: 5%;
+    transform: skewY(-3deg);
 }
+
 
 .animation-trigger {
     background-color: #2962ff;
@@ -58,6 +75,7 @@ wrapper {
     overflow: hidden;
     width: 110%;
     height: 90px;
+    z-index: 4;
 }
 
 .animation-trigger:hover {
@@ -76,9 +94,13 @@ wrapper {
     left: 0.7%;
 }
 
-.social a *{
-    color: rgba(30,30,30,0.7);
+.social a * {
+    color: rgba(30, 30, 30, 0.7);
+    width: auto;
+    height: auto;
     transition: 0.5s;
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
 }
 
 .social a .fa-github-square:hover {
@@ -109,7 +131,8 @@ footer {
     left: 0;
     right: 0;
     width: auto;
-    height: 100px;
+    height: 80px;
+    z-index: -1;
 }
 
 footer p {
@@ -117,4 +140,4 @@ footer p {
     bottom: 10px;
     left: 10px;
     width: auto;
-    text-shadow: 5px 6px 9px rgba(0,0,0,1);
+    text-shadow: 5px 6px 9px rgba(0, 0, 0, 1);
