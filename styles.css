@@ -163,7 +163,7 @@ footer {
     left: 0;
     right: 0;
     width: auto;
-    height: 80px;
+    height: 10vh;
     z-index: -1;
 }
 
@@ -187,4 +187,5 @@ footer p {
         left: 40%;
         right: 5%;
     }
+    
 }
