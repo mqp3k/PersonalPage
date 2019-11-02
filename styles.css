@@ -146,7 +146,7 @@ html, body {
     transform: skewY(-3deg);
 }
 
-.animation-trigger {
+.skewed-box-bar {
     background-color: var(--primary-color);
     position: relative;
     top: -50px;
@@ -159,34 +159,42 @@ html, body {
     z-index: 4;
 }
 
-.animation-trigger:hover {
-    background-color: #448aff;
-}
-
-
-.my-photo {
-    width: auto;
+.basic-info {
+    object-fit: contain;
+    width: 100%;
     height: auto;
-    display: inline-block;
+    text-align: center;
 }
 
-.my-photo img{
+.basic-info img{
     border: var(--primary-color) solid 8px;
     border-radius: 5%;
-    max-width: 400PX;
+    display: inline-block;
 }
 
-.text-about-me{
-    position: relative;
+.personal-info {
     display: inline-block;
+    width: 20vw;
     vertical-align: top;
-    margin: 0 0 0 5%;
+    text-align: left;
 }
 
-.text-about-me p {
+.basic-info .personal-info p{
     font-size: 1.5rem;
-    display: inline-block;
     margin-right: 30px;
+    margin-bottom: 15px;
+    white-space: nowrap;
+}
+
+.text-about-me .personal-info p {
+    font-size: 1.15rem;
+    text-align: justify;
+}
+
+.bio {
+    font-family: 'Oswald', sans-serif;
+    margin-top: 30px;
+    display: block;
 }
 
 .info-type {
@@ -196,8 +204,8 @@ html, body {
 footer {
     background-color: var(--primary-color);
     color: white;
-    position: fixed;
-    bottom: 0;
+    position: absolute;
+    bottom: -6vh;
     left: 0;
     right: 0;
     width: auto;
@@ -226,7 +234,6 @@ footer p {
 
     footer {
         position: absolute;
-        overflow: hidden;
         bottom: -7vh;
         height: 15vh;
     }
@@ -239,5 +246,29 @@ footer p {
         vertical-align: bottom;
         width: auto;
         transform: scale(0.7);
+    }
+
+    .basic-info .personal-info{
+        width: auto;
+    }
+
+    .basic-info img{
+        width: 80vw;
+    }
+
+    .basic-info .personal-info img {
+        width: 90vw;
+    }
+
+    .basic-info .personal-info p{
+        font-size: 1.5rem;
+        margin-right: 0;
+        display: block;
+        width: 100%;
+    }
+
+    .content-box {
+        padding-left: 5%;
+        padding-right: 5%;
     }
 }
