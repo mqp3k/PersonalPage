@@ -9,7 +9,8 @@
     font-family: 'Staatliches', sans-serif;
 }
 
-html, body {
+html,
+body {
     overflow: auto;
     height: 100%;
 }
@@ -42,7 +43,7 @@ html, body {
     z-index: 1;
 }
 
-.nav-buttons{
+.nav-buttons {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -69,6 +70,56 @@ html, body {
     background-color: var(--primary-color);
     transform: scale(1.2) rotate(5deg);
 }
+
+.inviting-text {
+    position: fixed;
+    right: 20%;
+    top: 30%;
+}
+
+#feel-free {
+    animation-name: invite-animation-first;
+    animation-delay: 2s;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes invite-animation-first {
+    0% {
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#read-me {
+    animation-name: invite-animation-second;
+    animation-delay: 3.7s;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes invite-animation-second {
+    0% {
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.inviting-text p {
+    font-family: 'Liu Jian Mao Cao', cursive;
+    color: var(--primary-color);
+    text-shadow: 8px 5px 11px rgba(47, 47, 47, 0.78);
+    font-size: 3rem;
+}
+
 .social {
     display: flex;
     flex-flow: column wrap;
@@ -166,10 +217,11 @@ html, body {
     text-align: center;
 }
 
-.basic-info img{
+.basic-info img {
     border: var(--primary-color) solid 8px;
     border-radius: 5%;
     display: inline-block;
+    width: 27vw;
 }
 
 .personal-info {
@@ -179,7 +231,7 @@ html, body {
     text-align: left;
 }
 
-.basic-info .personal-info p{
+.basic-info .personal-info p {
     font-size: 1.5rem;
     margin-right: 30px;
     margin-bottom: 15px;
@@ -222,6 +274,11 @@ footer p {
 }
 
 @media only screen and (max-width: 800px) {
+    .inviting-text {
+        right: 4%;
+        white-space: nowrap;
+    }
+
     .social {
         justify-content: space-around;
         top: 60%;
@@ -248,19 +305,19 @@ footer p {
         transform: scale(0.7);
     }
 
-    .basic-info .personal-info{
+    .basic-info .personal-info {
         width: auto;
     }
 
-    .basic-info img{
+    .basic-info img {
         width: 80vw;
     }
 
-    .basic-info .personal-info img {
+    .basic-info img {
         width: 90vw;
     }
 
-    .basic-info .personal-info p{
+    .basic-info .personal-info p {
         font-size: 1.5rem;
         margin-right: 0;
         display: block;
