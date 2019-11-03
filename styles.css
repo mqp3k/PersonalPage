@@ -73,8 +73,8 @@ body {
 
 .inviting-text {
     position: fixed;
-    right: 20%;
-    top: 30%;
+    right: 25%;
+    top: 25%;
 }
 
 #feel-free {
@@ -84,14 +84,18 @@ body {
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
     opacity: 0;
+    margin-bottom: 2rem;
+    font-size: 6rem;
 }
 
 @keyframes invite-animation-first {
     0% {
+        transform: scale(1.5);
     }
 
     100% {
         opacity: 1;
+        
     }
 }
 
@@ -106,10 +110,12 @@ body {
 
 @keyframes invite-animation-second {
     0% {
+        transform: scale(0.5) rotate(-15deg);
     }
 
     100% {
         opacity: 1;
+        left: 0%;
     }
 }
 
@@ -273,10 +279,18 @@ footer p {
     text-shadow: 5px 6px 9px rgba(0, 0, 0, 1);
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 740px) {
     .inviting-text {
-        right: 4%;
+        right: 15%;
         white-space: nowrap;
+    }
+
+    #feel-free {
+        font-size: 3rem;
+    }
+
+    #read-me {
+        font-size: 2rem;
     }
 
     .social {
