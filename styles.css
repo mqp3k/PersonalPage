@@ -5,11 +5,12 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     font-family: 'Staatliches', sans-serif;
 }
 
-html,
+HTML,
 body {
     overflow: auto;
     height: 100%;
@@ -44,20 +45,31 @@ body {
 }
 
 .nav-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 100%;
     height: 2px;
 }
 
 .nav-buttons a {
     color: var(--primary-color);
-    transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+        -ms-transform: rotate(15deg);
+            transform: rotate(15deg);
     min-height: 15vh;
     width: 60%;
     background-color: whitesmoke;
-    box-shadow: 0px 0px 22px 15px rgba(0, 0, 0, 0.85);
+    -webkit-box-shadow: 0px 0px 22px 15px rgba(0, 0, 0, 0.85);
+            box-shadow: 0px 0px 22px 15px rgba(0, 0, 0, 0.85);
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
 }
 
@@ -68,7 +80,9 @@ body {
 .nav-buttons a:hover {
     color: white;
     background-color: var(--primary-color);
-    transform: scale(1.2) rotate(5deg);
+    -webkit-transform: scale(1.2) rotate(5deg);
+        -ms-transform: scale(1.2) rotate(5deg);
+            transform: scale(1.2) rotate(5deg);
 }
 
 .inviting-text {
@@ -78,19 +92,37 @@ body {
 }
 
 #feel-free {
-    animation-name: invite-animation-first;
-    animation-delay: 2s;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
+    -webkit-animation-name: invite-animation-first;
+            animation-name: invite-animation-first;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
     opacity: 0;
     margin-bottom: 2rem;
     font-size: 6rem;
 }
 
+@-webkit-keyframes invite-animation-first {
+    0% {
+        -webkit-transform: scale(1.5);
+                transform: scale(1.5);
+    }
+
+    100% {
+        opacity: 1;
+        
+    }
+}
+
 @keyframes invite-animation-first {
     0% {
-        transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+                transform: scale(1.5);
     }
 
     100% {
@@ -100,17 +132,35 @@ body {
 }
 
 #read-me {
-    animation-name: invite-animation-second;
-    animation-delay: 3.7s;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
+    -webkit-animation-name: invite-animation-second;
+            animation-name: invite-animation-second;
+    -webkit-animation-delay: 3.7s;
+            animation-delay: 3.7s;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
     opacity: 0;
+}
+
+@-webkit-keyframes invite-animation-second {
+    0% {
+        -webkit-transform: scale(0.5) rotate(-15deg);
+                transform: scale(0.5) rotate(-15deg);
+    }
+
+    100% {
+        opacity: 1;
+        left: 0%;
+    }
 }
 
 @keyframes invite-animation-second {
     0% {
-        transform: scale(0.5) rotate(-15deg);
+        -webkit-transform: scale(0.5) rotate(-15deg);
+                transform: scale(0.5) rotate(-15deg);
     }
 
     100% {
@@ -127,9 +177,15 @@ body {
 }
 
 .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     position: absolute;
     top: 10%;
     width: 3.5rem;
@@ -142,28 +198,38 @@ body {
     width: auto;
     height: auto;
     margin: 5px;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
     background-repeat: no-repeat;
     background-size: 100px 100px;
 }
 
 .social a .fa-github-square:hover {
-    transform: scale(1.25);
+    -webkit-transform: scale(1.25);
+        -ms-transform: scale(1.25);
+            transform: scale(1.25);
     color: #333;
 }
 
 .social a .fa-discord:hover {
-    transform: scale(1.25);
+    -webkit-transform: scale(1.25);
+        -ms-transform: scale(1.25);
+            transform: scale(1.25);
     color: #7289da;
 }
 
 .social a .fa-facebook-square:hover {
-    transform: scale(1.25);
+    -webkit-transform: scale(1.25);
+        -ms-transform: scale(1.25);
+            transform: scale(1.25);
     color: #3b5998;
 }
 
 .social a .fa-steam-square:hover {
-    transform: scale(1.25);
+    -webkit-transform: scale(1.25);
+        -ms-transform: scale(1.25);
+            transform: scale(1.25);
     color: #000000;
 }
 
@@ -190,9 +256,12 @@ body {
     width: auto;
     height: 100%;
     min-height: 400px;
-    transform: rotate(3deg) skewX(3deg);
+    -webkit-transform: rotate(3deg) skewX(3deg);
+        -ms-transform: rotate(3deg) skewX(3deg);
+            transform: rotate(3deg) skewX(3deg);
     overflow: hidden;
-    box-shadow: 0px 0px 22px 15px rgba(0, 0, 0, 0.85);
+    -webkit-box-shadow: 0px 0px 22px 15px rgba(0, 0, 0, 0.85);
+            box-shadow: 0px 0px 22px 15px rgba(0, 0, 0, 0.85);
 }
 
 .content-box {
@@ -200,7 +269,9 @@ body {
     padding-left: 15%;
     padding-right: 15%;
     margin-bottom: 5%;
-    transform: skewY(-3deg);
+    -webkit-transform: skewY(-3deg);
+        -ms-transform: skewY(-3deg);
+            transform: skewY(-3deg);
 }
 
 .skewed-box-bar {
@@ -209,7 +280,9 @@ body {
     top: -50px;
     left: -1.5%;
     right: -1.5%;
-    transform: rotate(-3deg);
+    -webkit-transform: rotate(-3deg);
+        -ms-transform: rotate(-3deg);
+            transform: rotate(-3deg);
     overflow: hidden;
     width: 110%;
     height: 90px;
@@ -217,7 +290,8 @@ body {
 }
 
 .basic-info {
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
     width: 100%;
     height: auto;
     text-align: center;
@@ -294,13 +368,16 @@ footer p {
     }
 
     .social {
-        justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
         top: 60%;
         width: auto;
         height: 4.65em;
         right: 2%;
         left: 25%;
-        transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+                transform: scale(0.8);
     }
 
     footer {
@@ -316,7 +393,9 @@ footer p {
         text-align: right;
         vertical-align: bottom;
         width: auto;
-        transform: scale(0.7);
+        -webkit-transform: scale(0.7);
+            -ms-transform: scale(0.7);
+                transform: scale(0.7);
     }
 
     .basic-info .personal-info {
